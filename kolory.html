@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Pomocnik CSS</title>
+		<link rel="stylesheet" type="text/css" href="styl2.css">
+	</head>
+
+	
+	<body>
+				
+		<div>
+		
+			<header id="lewy">
+				<h1>Pomocnik CSS</h1>
+			</header>
+			
+			
+			<header id="prawy">
+				<ul>
+					<li><a href="kolory.html">Kolory</a></li>
+					<li><a href="czcionki.html">Czcionki</a></li>
+					<li><a href="style.html">Style CSS</a></li>
+					<li><a href="https://www.w3schools.com/css/" target="_blank">Pomoc</a></li>
+				</ul>
+			</header>
+			
+			
+			<main>
+				<h2>Podaj składową H koloru w kodzie HSL</h2>
+				<p>0 do 30 czerwienie, do 60 żółcie, do 150 zielenie, do 250 niebieskie, do 360 fiolet i purpura</p>
+				<img src="kolory.jpg" alt="Przestrzeń barw HSL">
+				<br><input type="number" max="360" placeholder="0-360" id="wartosc">
+				<button onclick="skrypt()">Generuj paletę</button>
+				
+				<script>
+					
+					function skrypt(){
+					
+						var wartosc = document.getElementById("wartosc").value;		
+						
+						var glowny = document.getElementById("glowny");
+						var drugi = document.getElementById("drugi");
+						var trzeci = document.getElementById("trzeci");
+						var czwarty = document.getElementById("czwarty");
+						var piaty = document.getElementById("piaty");
+						
+						glowny.style = 'background-color: hsl('+ wartosc +', 100%, 50%)';
+						drugi.style = 'background-color: hsl('+ wartosc +', 80%, 50%)';
+						trzeci.style = 'background-color: hsl('+ wartosc +', 60%, 50%)';
+						czwarty.style = 'background-color: hsl('+ wartosc +', 40%, 50%)';
+						piaty.style = 'background-color: hsl('+ wartosc +', 20%, 50%)';
+					}
+				
+				</script>
+				
+				<table>
+					<tr>
+						<td colspan="4" id="glowny">Kolor główny</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td id="drugi">kolor 2</td>
+						<td id="trzeci">kolor 3</td>
+						<td id="czwarty">kolor 4</td>
+						<td id="piaty">kolor 5</td>
+					</tr>
+				</table>
+			</main>
+			
+			
+			<footer>
+				<p>Autor: xoBartoxx</p>
+			</footer>
+		
+		</div>
+		
+	</body>
+
+
+</html>
